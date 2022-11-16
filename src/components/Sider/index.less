@@ -1,0 +1,94 @@
+@keyframes rotate-loop {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.ant-layout {
+  .ant-layout-sider {
+    transition: all .7s;
+    background-color: var(--sider-color);
+    .ant-layout-sider-children {
+      text-align: center;
+      .logo {
+        height: 60px;
+        width: 60px;
+        animation: rotate-loop 5s linear infinite;
+      }
+    }
+    .ant-menu {
+      transition: all .7s;
+      color: var(--font-color);
+      background-color: transparent;
+      .ant-menu-item:hover {
+        color: var(--menu-submenu-selected);
+      }
+      .ant-menu-item:active {
+        background-color: var(--menu-item-selected-bg);
+      }
+      .ant-menu-item-selected {
+        color: var(--menu-submenu-selected);
+        &::after {
+          border-color: var(--menu-item-bgright-color);
+        }
+      }
+    }
+    .ant-menu-inline, .ant-menu-vertical {
+      border: none;
+    }
+    .ant-menu-sub {
+      background-color: var(--menu-color);
+    }
+  }
+}
+
+.ant-menu-submenu-title:hover {
+  color: var(--menu-submenu-selected) !important;
+}
+
+.ant-menu-submenu-selected {
+  color: var(--menu-submenu-selected) !important;
+}
+.ant-menu-item-active {
+  color: var(--menu-submenu-selected) !important;
+}
+.ant-menu-submenu-active {
+  color: var(--menu-submenu-selected) !important;
+}
+.ant-menu-item-selected {
+  color: var(--menu-submenu-selected) !important;
+}
+.ant-menu-submenu-title:active {
+  background-color: var(--menu-item-selected-bg) !important;
+}
+.ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
+  background-color: var(--menu-item-selected-bg) !important;
+}
+
+// 侧边栏伸缩关闭时鼠标移除Menu-item效果
+div .ant-menu-submenu-popup > .ant-menu {
+  background-color: var(--sider-color);
+  color: var(--font-color);
+}
+
+@media screen and (max-width: 1250px) {
+  .ant-layout-sider {
+    max-width: 150px !important;
+    min-width: 150px !important;
+    width: 150px !important;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .ant-layout-sider {
+    max-width: 80px !important;
+    min-width: 80px !important;
+    width: 80px !important;
+    .ant-menu-title-content {
+      opacity: 0 !important;
+    }
+  }
+}

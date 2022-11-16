@@ -1,0 +1,10 @@
+@import '~antd/dist/antd.css';
+* {
+  text-decoration: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+h1, h2, h3 {
+  color: var(--main-content-font-color)
+}

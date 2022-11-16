@@ -1,0 +1,91 @@
+
+.ant-layout {
+  .ant-layout-header {
+    transition: all .7s;
+    padding: 0 20px;
+    background: var(--header-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .trigger {
+      // line-height: 23px;
+      cursor: pointer;
+      transition: color 0.3s;
+      font-size: 22px;
+      color: var(--trigger-color);
+      &:hover{
+        color: var(--trigger-hover-color);
+      }
+    }
+    .tools {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      width: 30%;
+      .user-message {
+        display: flex;
+        align-items: center;
+        margin: 0 5px;
+        .anticon-bell {
+          font-size: 20px;
+        }
+        &:hover {
+          cursor: pointer;
+        }
+      }
+      .user-info {
+        display: block;
+        text-align: center;
+        width: 130px;
+        transition: all 0.3s;
+        &:hover{
+          cursor: pointer;
+          // background-color: rgb(231, 226, 226, .1);
+        }
+        .nickname {
+          padding: 0 5px;
+          color: var(--font-color);
+        }
+      }
+      // 选中时Switch的背景色
+      .switch {
+      }
+      
+    }
+    .message-box {
+      width: 300px;
+      height: 380px;
+      position: absolute;
+      left: 1400px;
+      top: 70px;
+      background-color: #fff;
+      z-index: 9;
+      border: 1px solid #fff;
+      border-radius: 6px;
+      box-shadow: 0 3px 15px rgba(0,0,0, .1);
+      .ant-tabs-nav-list {
+        display: flex;
+        align-items: center;
+        margin: 0 auto;
+        width: 50%;
+        // line-height: 55px;
+        .ant-tabs-tab {
+          flex: 1;
+          text-align: center;
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+.ant-dropdown-menu {
+  background-color: var(--sider-color) !important;
+  .ant-dropdown-menu-item {
+    // background-color: var(--sider-color);
+    color: var(--font-color) !important;
+    &:hover {
+      background-color: var(--menu-item-selected-bg);
+    }
+  }
+}
