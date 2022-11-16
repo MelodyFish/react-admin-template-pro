@@ -58,9 +58,9 @@
 |   ├─ App.css                # 入口页面样式
 │   ├─ App.jsx                # 入口页面
 |   ├─ index.css              # 全局样式文件
+|   ├─ index.js               # 源码入口
 |   ├─ route.js               # 路由表配置文件
-|   ├─ setupProxy.js          # 代理配置
-│   └─index.js                # 源码入口
+|   └─ setupProxy.js          # 代理配置
 └── package.json              # package.json
 ```
 ## 安装&启动
