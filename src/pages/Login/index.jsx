@@ -1,10 +1,3 @@
-/*
- * @Descripttion: 
- * @Author: GuoQiang Yu
- * @Date: 2022-08-10 10:50:16
- * @LastEditors: Andy
- * @LastEditTime: 2022-09-01 20:45:28
- */
 import React from 'react'
 import { Button, Form, Input, message } from 'antd'
 import { useStore } from '@/store'
@@ -22,11 +15,9 @@ export default function Login() {
         username,
         password
       }).then(res => {
-        const { nickname, role } = res
         userStore.setUserInfo(res)
-        // userStore.setUserRole(role)
         userStore.setUserAuth(true)
-        message.success(`欢迎 ${ nickname }登录~~`)
+        message.success(`欢迎 ${ res.name }登录~~`)
         window.location.href = '/'
       })
     }

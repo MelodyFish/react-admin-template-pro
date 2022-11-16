@@ -5,10 +5,7 @@ class UserStore {
   userInfo = {
     name: '',
     role: '',
-
   }
-  username = ''
-  role = ''
   isAuth = false
   constructor() {
     makeAutoObservable(this)
@@ -16,11 +13,7 @@ class UserStore {
   }
   setUserInfo(info) {
     this.userInfo = info
-    console.log('----', this.userInfo)
   }
-  // setUserRole(role) {
-  //   this.role = role
-  // }
   setUserAuth(isAuth) {
     this.isAuth = isAuth
   }

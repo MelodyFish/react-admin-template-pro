@@ -9,7 +9,7 @@ module.exports = function(app) {
     }),
     createProxyMiddleware('/user', {  
       target: 'your address',
-      changeOrigin: true, //控制服务器接收到的请求头中host字段的值
+      changeOrigin: true,
     })
   )
 }

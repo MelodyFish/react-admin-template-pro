@@ -7,7 +7,6 @@ export function login(data) {
       resolve({
         role: username,
         name: username==='user'? '萌新用户': '超级管理员',
-        // isAuth : true
       })
     }, 2000)
   })

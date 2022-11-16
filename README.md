@@ -1,70 +1,80 @@
-# Getting Started with Create React App
+# React-Admin-Template-Pro
+## 前言
+> 在做这个系统前，我调查了一番，发现和React后台模板相关的项目有以下特点：技术栈老旧、项目不完整、文档缺失、组件不灵活(写死的居多)。同时也为了方便初级程序员找到一个合适的练手项目，方便全栈工程师能够利用该系统快速搭建项目，方便前端工作人员直接写业务代码避免重复性工作，出于这个目的写了这个系统。
+## 简介
+&emsp;&emsp;该系统是基于`React Hooks`和 `React-Router V6` 开发的后台管理系统模板，整个系统采用的技术栈都比较新并且以组件化的方式搭建而成，涵盖了`登录\注销`, `主题切换`, `动态路由侧边栏`, `动态面包屑`, `响应式收缩侧边栏`, `鉴权路由`, `权限路由`等功能，详细功能请移步至此, 平均每个组件 **60** 行代码量，方便食用。
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+&emsp;&emsp;如果遇到不想用的功能，可直接移除掉即可，各模块耦合度非常低是**可插拔式**的。
 
-## Available Scripts
+&emsp;&emsp;开源维护不易，如果真的帮助到你，真的很开心。点击右上角的 **Star** 鼓励一下作者吧~
+## 功能
+- 登录/注销
+- 主题切换
+- 动态侧边栏
+  - 根据路由表配置自动生成
+  - 支持多级嵌套路由
+  - 自适应收缩侧边栏
+  - 根据权限动态显示
+- 动态面包屑
+- Axios再封装
+  - 实例配置
+  - 请求&响应拦截
+  - 网络请求状态码处理
+- 鉴权组件
+- 权限组件
+- 懒加载组件
+- less&sass适配
+- 404页面
+- 代理
+- 未来会增加的功能
+  - 拖拽
+  - 富文本
+  - 次世代UI
+  - 全局加载
+  - 导入导出Excel
 
-In the project directory, you can run:
+## 技术栈
+- `React@18 Hooks` 基于 React 最新版本，全面拥抱Hooks
+- `React-Router@6.x` 只需配置路由表即可自动生成
+- `Antd@4.23.x` 国内最火的React-CSS库
+- `Mobx@6.x` 全局状态管理，语法简单，功能强大，完虐dva, 5分钟轻松入手
+- `ECharts@5.x` 前端必备的数据可视化库
+- `Axios@0.27.x` 基于Promise封装的网络请求库，99%的前端用了都说好
+- `Less&Sass` 提供更加强大的语法
+- `mobx-persist-store @1.0.4` 自动将全局状态放到localStorage或SessionStorage上并同步
 
-### `npm start`
+## 目录结构
+```
+├─ public                     # 静态资源
+│   ├─ favicon.ico            # favicon图标
+│   └─ index.html             # html模板
+├─ src                        # 项目源代码
+│   ├─ assets                 # 图片 字体等静态资源
+│   ├─ components             # 全局公用组件
+│   ├─ pages                  # 路由组件
+│   ├─ service                # 所有网络请求
+│   ├─ store                  # 全局状态管理
+│   ├─ utils                  # 全局公用方法
+|   ├─ App.css                # 入口页面样式
+│   ├─ App.jsx                # 入口页面
+|   ├─ index.css              # 全局样式文件
+|   ├─ route.js               # 路由表配置文件
+|   ├─ setupProxy.js          # 代理配置
+│   └─index.js                # 源码入口
+└── package.json              # package.json
+```
+## 安装&启动
+```
+  克隆项目
+  1. git clone https://github.com/MelodyFish/react-admin-template-pro.git
+  进入目录
+  2. cd react-admin-template-pro
+  安装依赖
+  3. npm install    ||   yarn install
+  启动
+  4. npm run start  ||   yarn start
+```
+## 部分功能展示
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

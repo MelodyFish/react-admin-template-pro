@@ -10,7 +10,7 @@ function request(config) {
   })
   instance.defaults.headers.post['Content-Type'] = 'application/json'
   instance.interceptors.request.use(config => {
-    // do something after sending the network rqeust
+    // do something before sending the network rqeust
     const token = getSession('token')
     if(token) {
       config.headers.Authorization = 'Bearer ' + token
@@ -29,7 +29,7 @@ function request(config) {
         message.error('未授权！请重新登录')
         break
       case 500:
-        message.error('服务器内部错误，请稍候')
+        message.error('服务器内部错误，请稍候重试')
         break
       default:
         break
