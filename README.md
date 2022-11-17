@@ -63,6 +63,14 @@
 |   └─ setupProxy.js          # 代理配置
 └── package.json              # package.json
 ```
+## 部分功能展示
+### 主题切换
+![主题切换](https://pic.imgdb.cn/item/6374dcee16f2c2beb15c52bb.gif)
+
+### 自适应收缩侧边栏
+![自适应侧边栏](https://pic.imgdb.cn/item/63758fe716f2c2beb18a16b1.gif)
+
+
 ## 安装&启动
 ```
   克隆项目
@@ -74,7 +82,3 @@
   启动
   4. npm run start  ||   yarn start
 ```
-## 部分功能展示
-
-
-
