@@ -70,6 +70,13 @@
 ### 自适应收缩侧边栏
 ![自适应侧边栏](https://pic.imgdb.cn/item/63758fe716f2c2beb18a16b1.gif)
 
+### 根据权限动态显示侧边栏
+#### 当你以管理员的身份进入时，会显示Dashboard下“分析页”，但以普通用户的身份时则不会显示。
+![权限路由](https://pic.imgdb.cn/item/637d892416f2c2beb180caa7.png)
+
+![权限路由](https://pic.imgdb.cn/item/637d8a5016f2c2beb1821ab0.png)
+#### 即使你知道该路由的路径，想通过改变浏览器URL强行进入时，也会因为没有权限而被阻挡,效果如下图所示：
+![权限路由](https://pic.imgdb.cn/item/637d92a216f2c2beb18eb5ce.gif)
 
 ## 安装&启动
 ```

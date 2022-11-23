@@ -73,11 +73,15 @@ export default function workPlatform() {
       name: '高逼格设计天团',
     }
   ]
+  function toGreetingForTime() {
+    const curTime = new Date().getHours()
+    return (curTime>=5 && curTime<=12)? '早上好': (curTime>=12 && curTime<=18)? '下午好': '晚上好'
+  } 
   return (
     <Fragment>
       <div className='work-platform'>
+      <h2 style={{fontWeight: 'bold', color: 'var(--font-color)'}}>工作台</h2>
         <div className='work-header'>
-          <h2 style={{fontWeight: 'bold', color: 'var(--font-color)'}}>工作台</h2>
           <div className='work-header-userinfo'>
             <div className="userinfo">
               <div className='useravatar'>
@@ -86,8 +90,8 @@ export default function workPlatform() {
                 />
               </div>
               <div className="details">
-                <h2 style={{marginBottom: '3px', color: 'var(--font-color)'}}>早安，于国强，祝你开心每一天</h2>
-                <div style={{fontSize: '16px'}}>Developer |海光信息公司－技术支撑中心－信息技术部－前端开发工程师</div>
+                <h2 style={{marginBottom: '3px', color: 'var(--font-color)'}}>{toGreetingForTime()}，XXX，祝你开心每一天</h2>
+                <div style={{fontSize: '16px'}}>Developer | XX信息公司－技术支撑中心－技术开发部－前端开发工程师</div>
               </div>
             </div>
             <ul className="userrank">
