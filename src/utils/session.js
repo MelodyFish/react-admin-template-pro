@@ -7,4 +7,13 @@ function setSession(name, value) {
 function clearSession(name) {
   return sessionStorage.removeItem(name)
 }
-export { getSession, setSession, clearSession }
+function getLocalStorage(name) {
+  return localStorage.getItem(name)
+}
+function setLocalStorage(name, value) {
+  return localStorage.setItem(name, value)
+}
+function clearLocalStorage(name) {
+  return localStorage.removeItem(name)
+}
+export { getSession, setSession, clearSession, getLocalStorage, setLocalStorage, clearLocalStorage }

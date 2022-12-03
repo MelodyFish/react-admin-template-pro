@@ -2,6 +2,7 @@ import React from 'react'
 import { Button, Form, Input, message } from 'antd'
 import { useStore } from '@/store'
 import { login } from '@/service/user/user'
+import { setLocalStorage } from '@/utils/session'
 import './index.less'
 
 export default function Login() {
@@ -16,7 +17,7 @@ export default function Login() {
         password
       }).then(res => {
         userStore.setUserInfo(res)
-        userStore.setUserAuth(true)
+        setLocalStorage('token', res.token)
         message.success(`欢迎 ${ res.name }登录~~`)
         window.location.href = '/'
       })

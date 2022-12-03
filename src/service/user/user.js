@@ -7,6 +7,7 @@ export function login(data) {
       resolve({
         role: username,
         name: username==='user'? '萌新用户': '超级管理员',
+        token: 'Aaasfasgl1243124wdgwegwe'
       })
     }, 2000)
   })

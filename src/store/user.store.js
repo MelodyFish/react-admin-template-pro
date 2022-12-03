@@ -6,7 +6,6 @@ class UserStore {
     name: '',
     role: '',
   }
-  isAuth = false
   constructor() {
     makeAutoObservable(this)
     makePersistable(this, {name: 'user', properties: ['userInfo', 'isAuth'], storage: localStorage} )
@@ -14,13 +13,9 @@ class UserStore {
   setUserInfo(info) {
     this.userInfo = info
   }
-  setUserAuth(isAuth) {
-    this.isAuth = isAuth
-  }
   clearAllInfo() {
     this.userInfo.name = ''
     this.userInfo.role = ''
-    this.isAuth = false
   }
 }
 

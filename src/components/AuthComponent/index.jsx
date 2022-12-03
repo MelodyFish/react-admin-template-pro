@@ -1,13 +1,12 @@
 import React, { Fragment } from 'react'
 import { Navigate } from 'react-router-dom'
-import { useStore } from '@/store'
+import { getLocalStorage } from '@/utils/session'
 
 export default function AuthComponent(props) {
   const { children } = props
-  const { userStore } = useStore()
   return (
     <Fragment>
-      { userStore.isAuth? children: <Navigate to='/login' replace /> }
+      { getLocalStorage('token') ? children: <Navigate to='/login' replace /> }
     </Fragment>
   )
 }
