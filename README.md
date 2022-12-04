@@ -1,5 +1,5 @@
 # React-Admin-Template-Pro
-![logo](https://pic.imgdb.cn/item/638c361716f2c2beb14bb1c2.png)
+![logo](https://s2.loli.net/2022/12/04/wnk6sui1CgHEWQG.png)
 
 - <font size=4 >[在线预览](https://www.cloudshadow.xyz)</font>
 -  <font size=4 >[疑问和建议请在这提交](https://github.com/MelodyFish/react-admin-template-pro/issues)</font>
