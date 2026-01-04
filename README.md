@@ -8,9 +8,9 @@
 
 ## 赞助
 > 开发实属不易，如果有帮助到老板，可以支持一下
-&emsp;&emsp BSC： 0xb5a6f97a79448faa435d5dd033fbe0cea0a9f1ed
-&emsp;&emsp;SOL： 6L9FfQ5L8ii86pSTRWpnpuAat1wsjhvx7XMXDBH3ynw5
-币安Uid: 145633770
+>BSC： 0xb5a6f97a79448faa435d5dd033fbe0cea0a9f1ed
+>SOL： 6L9FfQ5L8ii86pSTRWpnpuAat1wsjhvx7XMXDBH3ynw5
+>币安Uid: 145633770
 
 ## 简介
 &emsp;&emsp;该系统是基于`React Hooks`和 `React-Router V6` 开发的后台管理系统模板，整个系统采用的技术栈都比较新并且以组件化的方式搭建而成，涵盖了`登录\注销`, `主题切换`, `动态路由侧边栏`, `动态面包屑`, `响应式收缩侧边栏`, `鉴权路由`, `权限路由`等功能，详细功能请移步至此, 平均每个组件 **60** 行代码量，方便食用。
